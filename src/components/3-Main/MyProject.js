@@ -2,7 +2,7 @@ export const myProjects = [
   {
     projectTitle: "my app",
     category: ["react"],
-    imgPath: ".images/react1.png",
+    imgPath: "./images/react1.png",
     link: "https://my-app-tan-chi.vercel.app/",
     github: "https://github.com/abdelrahmanashraf11coding/my-app",
   },

@@ -9,10 +9,9 @@ const Main = () => {
 
   const handleClick = (buttonCategory) => {
     setActive(buttonCategory);
-
     const newArr = myProjects.filter((item) => {
       const zzz = item.category.filter((myItem) => myItem === buttonCategory);
-      return zzz.length > 0; // التحقق من أن المصفوفة تحتوي على العناصر المطابقة
+      return zzz.length > 0;
     });
     setArr(newArr);
   };
@@ -21,6 +20,7 @@ const Main = () => {
     <main className="flex">
       <section className="left-section flex">
         <button
+          key="all"
           onClick={() => {
             setActive("all");
             setArr(myProjects);
@@ -30,54 +30,48 @@ const Main = () => {
           all projects
         </button>
         <button
-          onClick={() => {
-            handleClick("css");
-          }}
+          key="css"
+          onClick={() => handleClick("css")}
           className={active === "css" ? "active" : null}
         >
           HTML & CSS
         </button>
-
         <button
-          onClick={() => {
-            handleClick("js");
-          }}
+          key="js"
+          onClick={() => handleClick("js")}
           className={active === "js" ? "active" : null}
         >
           JavaScript
         </button>
         <button
-          onClick={() => {
-            handleClick("react");
-          }}
+          key="react"
+          onClick={() => handleClick("react")}
           className={active === "react" ? "active" : null}
         >
-          React 
+          React
         </button>
         <button
-          onClick={() => {
-            handleClick("node");
-          }}
+          key="node"
+          onClick={() => handleClick("node")}
           className={active === "node" ? "active" : null}
         >
           Node & Express
         </button>
-        
       </section>
 
       <section className="right-section flex">
-      <AnimatePresence>
-        {arr.map((item) => {
-          return (
+        <AnimatePresence>
+          {arr.map((item) => (
             <motion.article
-            layout
-            initial={{ transform: "scale(0.4)" }}
-            animate={{ transform: "scale(1)" }}
-            transition={{ type: "spring", damping: 8, stiffness: 50 }}
-            key={item.projectTitle}
-             className="card"
+              layout
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.5 }}
+              transition={{ duration: 0.5 }}
+              key={item.projectTitle}
+              className="card"
             >
-              <img width={266} src={item.imgPath} alt="" />
+              <img width={266} src={item.imgPath} alt={item.projectTitle} />
               <div style={{ width: "266px" }} className="box">
                 <h1 className="title">{item.projectTitle}</h1>
                 <p className="subtitle">
@@ -87,8 +81,8 @@ const Main = () => {
                 </p>
                 <div className="flex icons">
                   <div style={{ gap: "11px" }} className="flex">
-                    <a href={item.link} target="_blank" className="icon-link"></a>
-                    <a href={item.github} target="_blank" className="icon-github"></a>
+                    <a href={item.link} target="_blank" rel="noopener noreferrer" className="icon-link"></a>
+                    <a href={item.github} target="_blank" rel="noopener noreferrer" className="icon-github"></a>
                   </div>
                   <a className="link flex" href="#">
                     more
@@ -100,9 +94,8 @@ const Main = () => {
                 </div>
               </div>
             </motion.article>
-          );
-        })}
-           </AnimatePresence>
+          ))}
+        </AnimatePresence>
       </section>
     </main>
   );

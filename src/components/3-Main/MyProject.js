@@ -18,7 +18,7 @@ export const myProjects = [
     category: ["css"],
     imgPath: "./images/youtube.png",
     link: "https://youtube-clone-tan-phi.vercel.app/",
-    github: "https://github.com/abdelrahmanashraf11coding/youtube-clone",
+    github: "https://github.com/abdelrahmanashraf11coding/youtube-clone-main",
   },
   {
     projectTitle: "landing page",
@@ -195,7 +195,6 @@ export const myProjects = [
     // تمت إزالة link و github
   },
 
-
   {
     projectTitle: "Facebook_2",
     category: ["Motion Graphics"],
@@ -207,7 +206,6 @@ export const myProjects = [
     category: ["Motion Graphics"],
     videoPath: "./images/Facebook_3.mp4", // رابط الفيديو
     posterPath: "./images/فلسطين.png", // رابط البوستر
-
   },
   {
     projectTitle: "Facebook",

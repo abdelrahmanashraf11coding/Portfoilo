@@ -9,7 +9,7 @@ function Hero() {
     <section className="hero flex">
       <div className="left-section ">
         <div className="parent-avater flex">
-          <img src="./me.jpg" className="avater" alt="" />
+          <img src="./abdelrahman.jpg" className="avater" alt="" />
           <div className="icon-verified"></div>
         </div>
         <h1 className="title">

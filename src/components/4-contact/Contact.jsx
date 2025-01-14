@@ -2,7 +2,7 @@ import "./contact.css";
 import { useForm, ValidationError } from "@formspree/react";
 import Lottie from "lottie-react";
 import doneAnimation from "../../../src/animation/done.json";
-import contactAnimation from "../../../src/animation/contact.json";
+import contactAnimation from "../../../src/animation/contact us.json";
 function Contact() {
   const [state, handleSubmit] = useForm("movvppnq");
 
@@ -63,7 +63,7 @@ function Contact() {
         <div className="  animation">
           <Lottie
             className="contact-animation"
-            style={{ height: 355 }}
+            style={{ height: 359 }}
             animationData={contactAnimation}
           />
         </div>

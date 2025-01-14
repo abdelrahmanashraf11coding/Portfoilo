@@ -3,8 +3,19 @@ import { useForm, ValidationError } from "@formspree/react";
 import Lottie from "lottie-react";
 import doneAnimation from "../../../src/animation/done.json";
 import contactAnimation from "../../../src/animation/contact us.json";
+import { useRef, useEffect } from "react";
+
 function Contact() {
   const [state, handleSubmit] = useForm("movvppnq");
+  const emailInputRef = useRef(null);
+  const messageInputRef = useRef(null);
+
+  useEffect(() => {
+    if (state.succeeded) {
+      emailInputRef.current.value = "";
+      messageInputRef.current.value = "";
+    }
+  }, [state.succeeded]);
 
   return (
     <section className="contact-us">
@@ -26,6 +37,7 @@ function Contact() {
               type="email"
               name="email"
               id="email"
+              ref={emailInputRef}
             />
             <ValidationError
               prefix="Email"
@@ -35,8 +47,8 @@ function Contact() {
           </div>
 
           <div className="flex" style={{ marginTop: "24px" }}>
-            <label htmlFor="message">your Message</label>
-            <textarea required name="message" id="message"></textarea>
+            <label htmlFor="message">Your Message</label>
+            <textarea required name="message" id="message" ref={messageInputRef}></textarea>
             <ValidationError
               prefix="Message"
               field="message"
@@ -44,7 +56,7 @@ function Contact() {
             />
           </div>
           <button type="submit" disabled={state.submitting} className="submit">
-            {state.submitting ? "submitting ..." : "submit"}
+            {state.submitting ? "Submitting ..." : "Submit"}
           </button>
           {state.succeeded && (
             <p
@@ -56,11 +68,11 @@ function Contact() {
                 style={{ height: 37 }}
                 animationData={doneAnimation}
               />
-              your message has been sent successfully
+              Your message has been sent successfully
             </p>
           )}
         </form>
-        <div className="  animation">
+        <div className="animation">
           <Lottie
             className="contact-animation"
             style={{ height: 359 }}

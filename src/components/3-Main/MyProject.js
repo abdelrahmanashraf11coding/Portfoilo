@@ -17,7 +17,7 @@ export const myProjects = [
     projectTitle: "youtube clone",
     category: ["css"],
     imgPath: "./images/youtube.png",
-    link: "https://youtube-clone-neon-rho.vercel.app/",
+    link: "https://youtube-clone-tan-phi.vercel.app/",
     github: "https://github.com/abdelrahmanashraf11coding/youtube-clone",
   },
   {

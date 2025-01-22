@@ -48,7 +48,7 @@ function Hero() {
         <br />
         <br />
         <a
-          href="https://drive.google.com/file/d/1yeLyJzYJXPoi9cffcGCSang1hIms5T7o/view?usp=sharing"
+          href="https://drive.google.com/file/d/1VBHH4vfErIgmKYt5rA5LLg4HNtvK17XZ/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
           className="btn"

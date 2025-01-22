@@ -63,6 +63,23 @@ section.hero .all-icons .icons:hover {
   cursor: pointer;
 }
 
+section.hero .btn {
+  background-color: #00377a;
+  color: var(--white);
+  border-radius: 5px;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  transition: 0.3s;
+  cursor: pointer;
+}
+section.hero .btn:hover {
+  background-color: #014b2a;
+  font-size: 1.1rem;
+  transition: 0.3s;
+  word-spacing: 1px;
+  cursor: pointer;
+}
+
 /* ====================
    1. right-section animation
 ======================= */

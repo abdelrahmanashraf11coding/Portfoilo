@@ -24,11 +24,37 @@ function Hero() {
           </p>
         </p>
         <div className="all-icons flex">
-          <a href="https://x.com/Abdelra53484736" target="_blank" className="icons icon-twitter"></a>
-          <a href="https://www.instagram.com/abdelrahmana122/" target="_blank"  className="icons icon-instagram"></a>
-          <a href="https://github.com/abdelrahmanashraf11coding" target="_blank" className="icons icon-github"></a>
-          <a href="https://www.linkedin.com/in/abdelrahman-ashraf-97293430b/" target="_blank" className="icons icon-linkedin-with-circle"></a>
+          <a
+            href="https://x.com/Abdelra53484736"
+            target="_blank"
+            className="icons icon-twitter"
+          ></a>
+          <a
+            href="https://www.instagram.com/abdelrahmana122/"
+            target="_blank"
+            className="icons icon-instagram"
+          ></a>
+          <a
+            href="https://github.com/abdelrahmanashraf11coding"
+            target="_blank"
+            className="icons icon-github"
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/abdelrahman-ashraf-97293430b/"
+            target="_blank"
+            className="icons icon-linkedin-with-circle"
+          ></a>
         </div>
+        <br />
+        <br />
+        <a
+          href="https://drive.google.com/file/d/1yeLyJzYJXPoi9cffcGCSang1hIms5T7o/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn"
+        >
+          Download CV
+        </a>
       </div>
 
       <div className="right-section animation ">
